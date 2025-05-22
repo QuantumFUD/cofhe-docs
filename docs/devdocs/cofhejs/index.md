@@ -99,7 +99,7 @@ const signer = (await provider.getSigner()) as ethers.JsonRpcSigner;
 // initialize cofhejs Client with ethers (it also supports viem)
 await cofhejs.initializeWithEthers({
  ethersProvider: provider,
- ethersSigner: wallet,
+ ethersSigner: signer,
  environment: "TESTNET"
 });
 ```
