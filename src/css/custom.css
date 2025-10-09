@@ -129,13 +129,13 @@ pre code {
   letter-spacing: 0.05rem;
   color: var(--ifm-color-primary);
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: none;
   padding: 8px var(--ifm-menu-link-padding-horizontal);
   display: block;
 }
 
 [data-theme='dark'] .sidebar-section-title {
-  color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-lightest) !important;
 }
 
 @font-face {
@@ -254,6 +254,10 @@ pre code {
   overflow: none;
 }
 
+.theme-doc-markdown a {
+  color: var(--ifm-link-color) !important;
+}
+
 @media  (min-width: 1001px) {
   .getting-started-iframe {
     display: block;
@@ -317,10 +321,9 @@ pre code {
 /* Tutorial button */
 .tutorial-button {
   padding: 5px 10px;
-  border: 1px solid var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary) !important;
   border-radius: 50px;
-  
-  color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary) !important;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
@@ -331,8 +334,8 @@ pre code {
 }
 
 .tutorial-button:hover {
-  background-color: var(--ifm-color-primary);
-  color: var(--ifm-color-glow);
+  background-color: var(--ifm-color-primary) !important;
+  color: var(--ifm-color-glow) !important;
   text-decoration: none;
 }
 
@@ -355,29 +358,16 @@ filter: brightness(0) saturate(100%) invert(6%) sepia(31%) saturate(5266%) hue-r
 }
 
 [data-theme='dark'] .orb-font {
-  color: var(--ifm-color-text);
+  color: var(--ifm-color-text) !important;
 }
-
-/* 
-.background-circle {
-  position: absolute; 
-  height: 300px; 
-  width: 300px; 
-  background: rgba(3, 0, 7, 0.6); 
-  border-radius: 50%; 
-  filter: blur(175px);
-
-  top: 50%;
-  left: 50%;  
-  transform: translate(-50%, -50%);  
-  z-index: -1;
-  
-} */
 
 .menu__link {
   font-size: 1em;
 }
 
+.menu__link--active {
+    color: var(--ifm-menu-color-active) !important;
+}
 
 .custom__body_flex {
   display: flex;
@@ -796,7 +786,7 @@ pre code:has(.code-block-diff-remove-line) {
 
 .theme-code-block .prism-code,
 pre code[class*="language-"]{
-  background:transparent !important;
+  background: var(--code-bg) !important;
   color:var(--code-text);
   /* Correct, modern mono stack (Geist/JetBrains first if present) */
   font-family:"Inter", "Geist Mono","JetBrains Mono","Fira Code",
@@ -894,47 +884,47 @@ pre code[class*="language-"]{
 
 /* TIP / SUCCESS */
 .theme-admonition.alert--success{
-  border-color: color-mix(in srgb, var(--admo-success) 35%, transparent);
+  border-color: color-mix(in srgb, var(--admo-success) 35%, transparent) !important;
   background:
     linear-gradient(180deg,
       color-mix(in srgb, var(--admo-success) 8%, var(--admo-bg)) 0%,
-      color-mix(in srgb, var(--admo-success) 4%, var(--admo-bg)) 100%);
+      color-mix(in srgb, var(--admo-success) 4%, var(--admo-bg)) 100%) !important;
 }
 .theme-admonition.alert--success :is([class^="admonitionIcon"]){
-  background: color-mix(in srgb, var(--admo-success) 12%, transparent);
+  background: color-mix(in srgb, var(--admo-success) 12%, transparent) !important;
 }
 .theme-admonition.alert--success :is([class^="admonitionIcon"]) svg{
-  fill: var(--admo-success);
+  fill: var(--admo-success) !important;
 }
 
 /* INFO */
 .theme-admonition.alert--info{
-  border-color: color-mix(in srgb, var(--admo-info) 35%, transparent);
+  border-color: color-mix(in srgb, var(--admo-info) 35%, transparent) !important;
   background:
     linear-gradient(180deg,
       color-mix(in srgb, var(--admo-info) 8%, var(--admo-bg)) 0%,
-      color-mix(in srgb, var(--admo-info) 4%, var(--admo-bg)) 100%);
+      color-mix(in srgb, var(--admo-info) 4%, var(--admo-bg)) 100%) !important;
 }
 .theme-admonition.alert--info :is([class^="admonitionIcon"]){
-  background: color-mix(in srgb, var(--admo-info) 12%, transparent);
+  background: color-mix(in srgb, var(--admo-info) 12%, transparent) !important;
 }
 .theme-admonition.alert--info :is([class^="admonitionIcon"]) svg{
-  fill: var(--admo-info);
+  fill: var(--admo-info) !important;
 }
 
 /* WARNING */
 .theme-admonition.alert--warning{
-  border-color: color-mix(in srgb, var(--admo-warn) 35%, transparent);
+  border-color: color-mix(in srgb, var(--admo-warn) 35%, transparent) !important;
   background:
     linear-gradient(180deg,
       color-mix(in srgb, var(--admo-warn) 8%, var(--admo-bg)) 0%,
-      color-mix(in srgb, var(--admo-warn) 4%, var(--admo-bg)) 100%);
+      color-mix(in srgb, var(--admo-warn) 4%, var(--admo-bg)) 100%) !important;
 }
 .theme-admonition.alert--warning :is([class^="admonitionIcon"]){
-  background: color-mix(in srgb, var(--admo-warn) 12%, transparent);
+  background: color-mix(in srgb, var(--admo-warn) 12%, transparent) !important;
 }
 .theme-admonition.alert--warning :is([class^="admonitionIcon"]) svg{
-  fill: var(--admo-warn);
+  fill: var(--admo-warn) !important;
 }
 
 /* DANGER (swap to a true red if you like) */
@@ -996,6 +986,8 @@ pre code[class*="language-"]{
   border-radius: 8px !important;
   background: var(--tbl-bg) !important;
   box-shadow: var(--tbl-shadow) !important;
+  display: block;
+  width: fit-content !important;
 }
 
 /* Header */
